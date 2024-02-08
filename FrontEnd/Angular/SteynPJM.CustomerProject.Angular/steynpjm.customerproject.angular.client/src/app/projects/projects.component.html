@@ -1,0 +1,27 @@
+<div *ngIf="projects" style="display: flex; flex-direction: column; align-items: center;">
+  <h2>Projects</h2>
+  <div style="align-self: flex-end;">
+    <button (click)="addProject()">Add Project</button>
+  </div>
+  <table style="margin: auto;">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let project of projects">
+        <td>{{project.code}}</td>
+        <td>{{project.name}}</td>
+        <td>{{project.description}}</td>
+        <td>
+          <button (click)="updateProject(project)">Update</button>
+          <button (click)="deleteProject(project)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

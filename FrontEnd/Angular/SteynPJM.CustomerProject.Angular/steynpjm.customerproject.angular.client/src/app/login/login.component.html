@@ -1,0 +1,13 @@
+<form>
+  <div>
+    <label for="userName">Username:</label><br>
+    <input #userName id="userName" type="text" name="userName" required>
+  </div>
+  <div>
+    <label for="password">Password:</label><br>
+    <input #password id="password" type="password" name="password" required>
+  </div>
+  <div>
+    <button type="button" (click)="login(userName.value, password.value)">Login</button>
+  </div>
+</form>

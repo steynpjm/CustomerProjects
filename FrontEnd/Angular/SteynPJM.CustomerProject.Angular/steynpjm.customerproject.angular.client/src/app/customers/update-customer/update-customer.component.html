@@ -1,0 +1,24 @@
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <h2>Update Customer</h2>
+  <label>
+    Name:
+    <input [(ngModel)]="customer.name" placeholder="Name">
+  </label>
+  <label>
+    Address 1:
+    <input [(ngModel)]="customer.address1" placeholder="Address Line 1">
+  </label>
+  <label>
+    Address 2:
+    <input [(ngModel)]="customer.address2" placeholder="Address Line 2">
+  </label>
+  <label>
+    Town:
+    <input [(ngModel)]="customer.town" placeholder="Town">
+  </label>
+  <label>
+    Country:
+    <input [(ngModel)]="customer.country" placeholder="Country">
+  </label>
+  <button (click)="updateCustomer()">Update</button>
+</div>

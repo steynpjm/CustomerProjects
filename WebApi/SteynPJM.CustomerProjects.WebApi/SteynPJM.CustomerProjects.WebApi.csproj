@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>76b7b172-7a11-4b75-babf-9de290d0bbdd</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.26" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="System.Linq.Async" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Database\SteynPJM.CustomerProjects.DatabaseLibrary\SteynPJM.CustomerProjects.DatabaseLibrary.csproj" />
+    <ProjectReference Include="..\..\Services\SteynPJM.CustomerProject.Service\SteynPJM.CustomerProjects.Service.csproj" />
+    <ProjectReference Include="..\..\Services\SteynPJM.CustomerProjects.Repository\SteynPJM.CustomerProjects.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

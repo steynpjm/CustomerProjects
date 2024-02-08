@@ -1,0 +1,24 @@
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <h2>Update User</h2>
+  <label>
+    Title:
+    <input [(ngModel)]="user.title" placeholder="Title">
+  </label>
+  <label>
+    First Name:
+    <input [(ngModel)]="user.firstname" placeholder="First Name">
+  </label>
+  <label>
+    Last Name:
+    <input [(ngModel)]="user.lastname" placeholder="Last Name">
+  </label>
+  <label>
+    Designation:
+    <input [(ngModel)]="user.designation" placeholder="Designation">
+  </label>
+  <label>
+    Email:
+    <input [(ngModel)]="user.email" placeholder="Email">
+  </label>
+  <button (click)="updateUser()">Update</button>
+</div>

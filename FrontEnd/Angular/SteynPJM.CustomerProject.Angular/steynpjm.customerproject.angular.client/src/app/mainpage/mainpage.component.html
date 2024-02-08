@@ -1,0 +1,13 @@
+<div class="container">
+  <nav class="menu material-menu">
+    <ul>
+      <li><a routerLink="/main/projects">Projects</a></li>
+      <li><a routerLink="/main/customers">Customers</a></li>
+      <li><a routerLink="/main/users">Users</a></li>
+      <li><a href="javascript:void(0)" (click)="logout()">Logout</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

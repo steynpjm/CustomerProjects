@@ -1,0 +1,30 @@
+<div *ngIf="!isLoading" style="display: flex; flex-direction: column; align-items: center;">
+  <h2>Update Project</h2>
+  <label>
+    Code:
+    <input [(ngModel)]="project.code" placeholder="Code">
+  </label>
+  <label>
+    Name:
+    <input [(ngModel)]="project.name" placeholder="Project Name">
+  </label>
+  <label>
+    Description:
+    <textarea [(ngModel)]="project.description" placeholder="Short description" name="description" rows="10" required></textarea>
+  </label>
+  <label>
+    Customer:
+    <select [(ngModel)]="project.companyHid" required>
+      <option *ngFor="let customer of customers" [value]="customer.id" [selected]="customer.id === project.companyHid">{{customer.value}}</option>
+    </select>
+  </label>
+  <label>
+    Manager:
+    <select [(ngModel)]="project.managerHid">
+      <option [ngValue]="null">Select a manager</option>
+      <option *ngFor="let manager of managers" [value]="manager.id" [selected]="manager.id === project.managerHid">{{manager.value}}</option>
+    </select>
+  </label>
+  <button (click)="updateProject()">Update</button>
+</div>
+

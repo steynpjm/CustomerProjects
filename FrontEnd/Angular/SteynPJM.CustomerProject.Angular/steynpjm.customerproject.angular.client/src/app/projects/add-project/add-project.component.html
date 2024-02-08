@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()" #projectForm="ngForm" class="centered-form">
+  <div *ngIf="!isLoading" style="display: flex; flex-direction: column; align-items: flex-start;">
+    <h2>Add Project</h2>
+    <label>
+      Code:
+      <input [(ngModel)]="project.code" placeholder="Code" name="code" required>
+    </label>
+    <label>
+      Name:
+      <input [(ngModel)]="project.name" placeholder="Project Name" name="name" required>
+    </label>
+    <label>
+      Description:
+      <textarea [(ngModel)]="project.description" placeholder="Short description" name="description" rows="10" required></textarea>
+    </label>
+    <label>
+      Customer:
+      <select [(ngModel)]="project.companyHid" name="companyHid" required>
+        <option *ngFor="let customer of customers" [value]="customer.id">{{customer.value}}</option>
+      </select>
+    </label>
+    <label>
+      Manager:
+      <select [(ngModel)]="project.managerHid" name="managerHid">
+        <option [ngValue]="null">Select a manager</option>
+        <option *ngFor="let manager of managers" [value]="manager.id">{{manager.value}}</option>
+      </select>
+    </label>
+    <button type="submit">Add</button>
+  </div>
+</form>
